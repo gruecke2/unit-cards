@@ -59,6 +59,8 @@ export interface UnitStats {
   power: number;
   toughness: number;
   morale: number;
+  command: number;
+  damage: number;
   size: UnitSize;
   type: UnitType;
 }

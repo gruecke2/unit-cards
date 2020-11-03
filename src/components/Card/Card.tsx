@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Card.css';
-import { UnitData, FortLevel, FortType } from '../../types/units';
+import { UnitData, FortLevel, FortType, UnitSize } from '../../types/units';
 import { CardTable } from './CardTable';
 import { CardFlags } from '../CardFlags/CardFlags';
 import { ancestryStats, fortMorale } from '../../fixtures/unitStats';
@@ -59,10 +59,12 @@ export class Card extends Component<Props> {
       experience,
       equipment,
       type,
+      damage,
       size,
       attack,
       defense,
       power,
+      command,
       toughness,
       morale,
       cost,
@@ -95,7 +97,7 @@ export class Card extends Component<Props> {
               type === 'Fortification' ? 'card-top-fort' : ''
             }`}
           >
-            <div className="card-name">{name}</div>
+            <div className="card-name padding-right">{name}</div>
             {type === 'Levies' ? (
               <div className="card-type">
                 {ancestryOverride
@@ -126,11 +128,13 @@ export class Card extends Component<Props> {
             <div className="card-cost">Cost: {cost ? cost : '-'}</div>
             <CardTable
               size={size}
+              damage={damage}
               attack={attack}
               defense={defense}
               power={power}
               toughness={toughness}
               morale={morale}
+              command={command}
               type={type}
             />
             {(ancestryStats[ancestry].traits.length &&

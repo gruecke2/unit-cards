@@ -7,6 +7,7 @@ interface StatBlock {
   defense: number;
   toughness: number;
   morale: number;
+  command: number;
 }
 
 interface AncestryStatBlock extends StatBlock {
@@ -20,6 +21,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 0,
     morale: 1,
     traits: ['Martial'],
+    command: 2
   },
   Dragonborn: {
     attack: 2,
@@ -28,6 +30,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 1,
     morale: 1,
     traits: ['Courageous'],
+    command: 2
   },
   Dwarf: {
     attack: 3,
@@ -36,6 +39,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 1,
     morale: 2,
     traits: ['Stalwart'],
+    command: 2
   },
   Elf: {
     attack: 2,
@@ -44,6 +48,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 0,
     morale: 1,
     traits: ['Eternal'],
+    command: 2
   },
   'Elven (Winged)': {
     attack: 1,
@@ -52,6 +57,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 0,
     morale: 1,
     traits: ['Eternal'],
+    command: 2
   },
   Ghoul: {
     attack: -1,
@@ -60,6 +66,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 2,
     morale: 0,
     traits: ['Undead', 'Horrify', 'Ravenous'],
+    command: 2
   },
   Gnoll: {
     attack: 2,
@@ -68,6 +75,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 0,
     morale: 1,
     traits: ['Frenzy'],
+    command: 2
   },
   Gnome: {
     attack: 1,
@@ -76,6 +84,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: -1,
     morale: 1,
     traits: [],
+    command: 2
   },
   Goblin: {
     attack: -1,
@@ -84,6 +93,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: -1,
     morale: 0,
     traits: [],
+    command: 2
   },
   Hobgoblin: {
     attack: 2,
@@ -92,6 +102,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 0,
     morale: 1,
     traits: ['Bred for war', 'Martial'],
+    command: 2
   },
   Human: {
     attack: 2,
@@ -100,6 +111,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 0,
     morale: 1,
     traits: ['Courageous'],
+    command: 2
   },
   Kobold: {
     attack: -1,
@@ -108,6 +120,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: -1,
     morale: -1,
     traits: [],
+    command: 2
   },
   Lizardfolk: {
     attack: 2,
@@ -116,6 +129,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 1,
     morale: 1,
     traits: ['Amphibious'],
+    command: 2
   },
   Ogre: {
     attack: 0,
@@ -124,6 +138,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 2,
     morale: 1,
     traits: ['Brutal'],
+    command: 2
   },
   Orc: {
     attack: 2,
@@ -132,6 +147,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 1,
     morale: 2,
     traits: ['Savage'],
+    command: 2
   },
   Skeleton: {
     attack: -2,
@@ -140,6 +156,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 1,
     morale: 1,
     traits: ['Undead', 'Mindless'],
+    command: 2
   },
   Treant: {
     attack: 0,
@@ -148,6 +165,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 2,
     morale: 0,
     traits: ['Twisting Roots', 'Rock-hurler'],
+    command: 2
   },
   Troll: {
     attack: 0,
@@ -156,6 +174,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 2,
     morale: 0,
     traits: ['Regenerate'],
+    command: 2
   },
   Zombie: {
     attack: -2,
@@ -164,6 +183,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 2,
     morale: 2,
     traits: ['Undead', 'Mindless'],
+    command: 2
   },
   None: {
     attack: 0,
@@ -172,6 +192,7 @@ export const ancestryStats: { [k: string]: AncestryStatBlock } = {
     toughness: 0,
     morale: 0,
     traits: [],
+    command: 2
   },
 };
 
@@ -182,6 +203,7 @@ export const experienceStats: { [k: string]: StatBlock } = {
     defense: 0,
     toughness: 0,
     morale: 0,
+    command: 2
   },
   Regular: {
     attack: 1,
@@ -189,6 +211,7 @@ export const experienceStats: { [k: string]: StatBlock } = {
     defense: 0,
     toughness: 1,
     morale: 1,
+    command: 2
   },
   Seasoned: {
     attack: 1,
@@ -196,6 +219,7 @@ export const experienceStats: { [k: string]: StatBlock } = {
     defense: 0,
     toughness: 1,
     morale: 2,
+    command: 2
   },
   Veteran: {
     attack: 1,
@@ -203,6 +227,7 @@ export const experienceStats: { [k: string]: StatBlock } = {
     defense: 0,
     toughness: 1,
     morale: 3,
+    command: 2
   },
   Elite: {
     attack: 2,
@@ -210,6 +235,7 @@ export const experienceStats: { [k: string]: StatBlock } = {
     defense: 0,
     toughness: 2,
     morale: 4,
+    command: 2
   },
   'Super-Elite': {
     attack: 2,
@@ -217,6 +243,7 @@ export const experienceStats: { [k: string]: StatBlock } = {
     defense: 0,
     toughness: 2,
     morale: 5,
+    command: 2
   },
   None: {
     attack: 0,
@@ -224,6 +251,7 @@ export const experienceStats: { [k: string]: StatBlock } = {
     defense: 0,
     toughness: 0,
     morale: 0,
+    command: 2
   },
 };
 
@@ -234,6 +262,7 @@ export const equipmentStats: { [k: string]: StatBlock } = {
     defense: 1,
     toughness: 0,
     morale: 0,
+    command: 2
   },
   Medium: {
     attack: 0,
@@ -241,6 +270,7 @@ export const equipmentStats: { [k: string]: StatBlock } = {
     defense: 2,
     toughness: 0,
     morale: 0,
+    command: 2
   },
   Heavy: {
     attack: 0,
@@ -248,6 +278,7 @@ export const equipmentStats: { [k: string]: StatBlock } = {
     defense: 4,
     toughness: 0,
     morale: 0,
+    command: 2
   },
   'Super-Heavy': {
     attack: 0,
@@ -255,6 +286,7 @@ export const equipmentStats: { [k: string]: StatBlock } = {
     defense: 6,
     toughness: 0,
     morale: 0,
+    command: 2
   },
   None: {
     attack: 0,
@@ -262,6 +294,7 @@ export const equipmentStats: { [k: string]: StatBlock } = {
     defense: 0,
     toughness: 0,
     morale: 0,
+    command: 2
   },
 };
 
@@ -276,6 +309,7 @@ export const typeStats: { [k: string]: TypeStatBlock } = {
     toughness: 0,
     morale: -1,
     costMultiplier: 0.75,
+    command: 2
   },
   Infantry: {
     attack: 0,
@@ -284,6 +318,7 @@ export const typeStats: { [k: string]: TypeStatBlock } = {
     toughness: 1,
     morale: 0,
     costMultiplier: 1,
+    command: 2
   },
   Cavalry: {
     attack: 1,
@@ -292,6 +327,7 @@ export const typeStats: { [k: string]: TypeStatBlock } = {
     toughness: 0,
     morale: 2,
     costMultiplier: 1.5,
+    command: 2
   },
   'Siege Engine': {
     attack: 1,
@@ -300,6 +336,7 @@ export const typeStats: { [k: string]: TypeStatBlock } = {
     toughness: 1,
     morale: 0,
     costMultiplier: 1.5,
+    command: 2
   },
   Archers: {
     attack: 0,
@@ -308,6 +345,7 @@ export const typeStats: { [k: string]: TypeStatBlock } = {
     toughness: 0,
     morale: 1,
     costMultiplier: 1.75,
+    command: 2
   },
   Flying: {
     attack: 0,
@@ -316,6 +354,7 @@ export const typeStats: { [k: string]: TypeStatBlock } = {
     toughness: 0,
     morale: 3,
     costMultiplier: 2,
+    command: 2
   },
   Fortification: {
     attack: 0,
@@ -324,6 +363,7 @@ export const typeStats: { [k: string]: TypeStatBlock } = {
     toughness: 0,
     morale: 0,
     costMultiplier: 1,
+    command: 2
   },
 };
 

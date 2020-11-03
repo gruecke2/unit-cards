@@ -74,6 +74,10 @@ export const morale = (state: State): number => {
         state.morale;
 };
 
+export const command = (state: State): number => {
+  return 5;
+}
+
 export const cost = (state: State): number => {
   let cost =
     attack(state) +

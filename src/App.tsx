@@ -19,6 +19,7 @@ import {
   toughness,
   morale,
   cost,
+  command,
 } from './utils/statCalculator';
 import { CustomTrait, traitData, TraitData } from './fixtures/traits';
 import { Collapse } from './components/Collapse/Collapse';
@@ -41,11 +42,13 @@ export interface State {
   equipment: UnitEquipment;
   selectedTraits: { value: string }[];
   size: UnitSize;
+  damage: number;
   attack: number;
   defense: number;
   power: number;
   toughness: number;
   morale: number;
+  command: number;
   fortLevel: FortLevel;
   fortType: FortType;
   cost: number;
@@ -69,11 +72,13 @@ class App extends Component<{}, State> {
     equipment: 'Medium' as UnitEquipment,
     selectedTraits: [] as { value: string }[],
     size: 'd6' as UnitSize,
+    damage: 0,
     attack: 0,
     defense: 0,
     power: 0,
     toughness: 0,
     morale: 0,
+    command: 0,
     fortLevel: '1st' as FortLevel,
     fortType: 'None' as FortType,
     cost: 0,
@@ -117,6 +122,7 @@ class App extends Component<{}, State> {
       power: power(this.state),
       toughness: toughness(this.state),
       morale: morale(this.state),
+      command: command(this.state),
       cost: cost(this.state),
       size:
         this.state.type === 'Fortification' && this.state.fortType !== 'None'
@@ -196,11 +202,13 @@ class App extends Component<{}, State> {
       equipment,
       selectedTraits,
       size,
+      damage,
       attack,
       defense,
       power,
       toughness,
       morale,
+      command,
       fortLevel,
       fortType,
       cost,
@@ -222,11 +230,13 @@ class App extends Component<{}, State> {
             equipment,
             selectedTraits,
             size,
+            damage,
             attack,
             defense,
             power,
             toughness,
             morale,
+            command,
             fortLevel,
             fortType,
             cost,
@@ -275,7 +285,7 @@ class App extends Component<{}, State> {
     return (
       <div className="container text-center">
         <h1>
-          <small>Strongholds & Followers</small>
+          <small>Strongholds & Followers | Kingdoms & Warfare</small>
           <br />
           Unit Card Creator
         </h1>
@@ -346,10 +356,12 @@ class App extends Component<{}, State> {
           <a href="https://shop.mcdmproductions.com/products/strongholds-followers-pdf">
             Strongholds & Followers
           </a>
+          <span> and </span>
+          <a href="https://shop.mcdmproductions.com/collections/kingdoms-warfare-preorder-shop/products/kingdoms-and-warfare-book">Kingdoms & Warfare</a>
           .
           <br />
           <small>
-            Iconography by Dan Connolly.
+            Iconography by Dan Connolly, dice icons by Lonnie Tapscott from Noun Project.
             <br />
             An{' '}
             <a href="https://github.com/freddybushboy/unit-cards">
@@ -357,6 +369,8 @@ class App extends Component<{}, State> {
             </a>{' '}
             project built by{' '}
             <a href="https://twitter.com/FreddyBushBoy">freddybushboy</a>.
+            <br />
+            Fork by <a href="https://github.com/gruecke2/unit-cards">Garret Rueckert</a>
           </small>
         </p>
       </div>
